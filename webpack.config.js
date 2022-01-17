@@ -1,4 +1,5 @@
 const path = require('path');
+// eslint-disable-next-line node/no-unpublished-require
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -7,20 +8,17 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-    entry: ['./src/App.js'],
+    entry: ['./src/App.tsx'],
     module: {
         rules: [
             {
-                test: /\.js?$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: [
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: [
-                                '@babel/preset-env',
-                                '@babel/preset-react',
-                            ].map(require.resolve),
+                            presets: ['@babel/preset-env', '@babel/preset-react'].map(require.resolve),
                         },
                     },
                 ],
