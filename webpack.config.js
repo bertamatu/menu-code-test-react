@@ -29,4 +29,7 @@ module.exports = {
         filename: 'bundle.js',
     },
     plugins: [htmlPlugin],
+    resolve: {
+        extensions: ['.js', '.ts', '.tsx'],
+    },
 };
