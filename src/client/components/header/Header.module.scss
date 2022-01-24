@@ -1,0 +1,16 @@
+@import './src/client/styles/config/_variables.scss';
+
+.headerContainer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18x;
+
+    .headerLogo {
+        font-size: 76px;
+        font-weight: $bold-font;
+    }
+}

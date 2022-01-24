@@ -1,0 +1,12 @@
+@import './variables';
+  
+  body {
+    font-family: $primary-font;
+    background-color: $primary-background-color;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  

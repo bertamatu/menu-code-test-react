@@ -1,0 +1,9 @@
+@import './src/client/styles/config/_variables.scss';
+
+.menuContainer {
+    background-color: $background-color-white;
+    min-height: 80vh;
+    max-height: auto;
+    width: 80vw;
+    box-shadow: $box-shadow;
+}

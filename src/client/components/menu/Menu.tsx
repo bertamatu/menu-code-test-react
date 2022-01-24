@@ -1,6 +1,8 @@
 import React from 'react';
 import { gql } from '@apollo/client/core';
 import { useQuery } from '@apollo/client';
+import styles from './Menu.module.scss';
+
 
 const GET_MENU = gql`
     query {
@@ -28,10 +30,11 @@ const Menu = () => {
     const { error, loading, data } = useQuery(GET_MENU);
 
     return (
-        <>
-            {console.log(error, loading, data)}
-            <div>HELLO FROM MENU</div>
-        </>
+        <main className={styles.menuContainer}>
+            {loading && <p style={{fontSize: '20px'}}>Loading...</p>}
+            {error && <p style={{color: 'red'}}>Error: {error.message}</p>}
+            {console.log(data)}
+        </main>
     );
 };
 
