@@ -35,7 +35,9 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/public/webpack/'),
         filename: 'bundle.js',
+        sourceMapFilename: '[name].js.map',
     },
+    devtool: 'source-map',
     plugins: [htmlPlugin],
     resolve: {
         extensions: ['.js', '.ts', '.tsx', '.scss'],
